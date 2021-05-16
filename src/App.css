@@ -1,38 +1,97 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 5vmin;
+	pointer-events: none;
+	margin-top: 6px;
+	margin-bottom: 15px;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	right: -245px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+	position: relative;
+	max-width: 700px;
+	width: 100%;
+	background: #161b22;
+	padding: 25px 30px;
+	border: 2px solid #21262d;
+	border-radius: 25px;
+	color: white;
+}
+
+.heading {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	color: rgb(255, 4, 4);
+
+	text-align: center;
+}
+
+.label {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: left;
+	width: 400px;
+	line-height: 26px;
+	margin-bottom: 9px;
+	margin-left: 50px;
+	font-size: xx-large;
+}
+
+.title {
+	text-align: center;
+	color: rgba(201, 201, 31, 0.932);
+	margin-bottom: 40px;
+	font-size: 20px;
+}
+
+.input {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align-last: center;
+	width: 400px;
+	margin-bottom: 20px;
+	margin-left: 50px;
+	height: 37px;
+	font-weight: 100;
+}
+
+.button {
+	background-color: #c78813; /*Orange G*/
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 22px;
+	margin-left: 155px;
+	width: 200px;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
