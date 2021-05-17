@@ -1,18 +1,18 @@
 body {
-  margin: 0;
-  font-family: monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background:  #0d1117;
-  min-height: 90vh;
-  /* background: linear-gradient(135deg, #0d1117, #ae99e7); */
+	margin: 0;
+	font-family: "Nunito", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	background: #0d1117;
+	min-height: 90vh;
+	/* background: linear-gradient(135deg, #0d1117, #ae99e7); */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }

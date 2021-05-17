@@ -37,15 +37,31 @@ function App() {
 	}
 
 	return (
-		<div>
-			<h1 className="heading">Cowin Notifier</h1>
-			<img src={logo} className="App-logo" alt="logo" />
-			<div className="container">
-				<h1 className="title"> Kindly Fill the form</h1>
-				<Form onSubmit={handleSubmit}>
-					<Form.Row>
-						<Form.Group as={Col} controlId="formGridEmail">
-							<Form.Label className="label">Email</Form.Label>
+		<>
+			<div style={{ maxWidth: "500px" }}>
+				<div style={{ display: "flex", justifyContent: "space-between" }}>
+					<h1 className="heading">CoWIN NOTIFY</h1>
+					<img src={logo} className="App-logo" alt="logo" />
+				</div>
+				<div
+					style={{
+						color: "white",
+						width: "100%",
+						textAlign: "center",
+						fontSize: "1rem",
+					}}
+				>
+					<p>
+						18+ and unable to book slot? No need to refresh the CoWIN website
+						every five minutes: Sign up and you will receive an email update
+						when a slot is available for you in the next seven days.
+					</p>
+				</div>
+				<div className="container">
+					<h1 className="title"> Kindly fill the form to get notified.</h1>
+					<Form onSubmit={handleSubmit}>
+						<Form.Group controlId="formGridEmail">
+							<Form.Label className="label">Email :</Form.Label>
 							<Form.Control
 								className="input"
 								name="email"
@@ -55,18 +71,9 @@ function App() {
 								required
 							/>
 						</Form.Group>
-					</Form.Row>
 
-					<Form.Row>
-						{/* <Form.Group as={Col} controlId="formGridCity">
-      <Form.Label className="label">City</Form.Label>
-      <Form.Control className="input" placeholder="Enter city"/>
-    </Form.Group> */}
-
-						<Form.Group as={Col} controlId="formGridState">
-							<Form.Label className="label" style={{ width: "410px" }}>
-								State
-							</Form.Label>
+						<Form.Group controlId="formGridState">
+							<Form.Label className="label">State :</Form.Label>
 							<Form.Control
 								className="input"
 								name="state"
@@ -74,17 +81,15 @@ function App() {
 								onChange={handleData}
 								required
 							>
-								<option value="">Choose...</option>
+								<option value="">Select State</option>
 								{states.states.map((value) => (
 									<option value={value.state_name}> {value.state_name} </option>
 								))}
 							</Form.Control>
 						</Form.Group>
 
-						<Form.Group as={Col} controlId="formGridState">
-							<Form.Label className="label" style={{ width: "410px" }}>
-								District
-							</Form.Label>
+						<Form.Group controlId="formGridState">
+							<Form.Label className="label">District :</Form.Label>
 							<Form.Control
 								className="input"
 								name="district"
@@ -92,7 +97,7 @@ function App() {
 								onChange={handleData}
 								required
 							>
-								<option value="">Choose...</option>
+								<option value="">Select District</option>
 								{dist.map((value) => (
 									<option value={value.district_id}>
 										{" "}
@@ -102,59 +107,101 @@ function App() {
 							</Form.Control>
 						</Form.Group>
 
-						<Form.Group as={Col} controlId="formGridZip">
-							<Form.Label className="label">Zip</Form.Label>
+						<Form.Group controlId="formGridZip">
+							<Form.Label className="label">Pincode :</Form.Label>
 							<Form.Control
 								className="input"
 								name="pin"
-								placeholder="Enter pin code"
+								placeholder="Enter pincode"
 								onChange={handleData}
 								required
 							/>
 						</Form.Group>
-					</Form.Row>
 
-					<Form.Group as={Col} controlId="formGridState">
-						<Form.Label className="label" style={{ width: "410px" }}>
-							{" "}
-							Which Vaccine?
-						</Form.Label>
-						<Form.Control
-							className="input"
-							name="vaccine"
-							as="select"
-							onChange={handleData}
-							required
-						>
-							<option>Choose...</option>
-							<option value="1">Covaxin</option>
-							<option value="2">Covishield</option>
-							<option value="3">Any</option>
-						</Form.Control>
-					</Form.Group>
+						<Form.Group controlId="formGridState">
+							<Form.Label className="label">Vaccine :</Form.Label>
+							<Form.Control
+								className="input"
+								name="vaccine"
+								as="select"
+								onChange={handleData}
+								required
+							>
+								<option>Select Vaccine</option>
+								<option value="1">Covaxin</option>
+								<option value="2">Covishield</option>
+								<option value="3">Any</option>
+							</Form.Control>
+						</Form.Group>
 
-					<Form.Group id="formGridCheckbox">
-						<Form.Check
-							className="input"
-							name="isfree"
-							type="checkbox"
-							label="Free Vaccine"
-							onChange={handleFree}
-						/>
-					</Form.Group>
-
-					<Button
-						className="button"
-						variant="primary"
-						type="submit"
-						onSubmit={handleSubmit}
-					>
-						Submit
-					</Button>
-				</Form>
+						<Form.Group id="formGridCheckbox">
+							<Form.Label className="label">Cost :</Form.Label>
+							<Form.Check
+								style={{ display: "flex", alignItems: "center" }}
+								className="input"
+								name="isfree"
+								type="checkbox"
+								label=" free "
+								onChange={handleFree}
+							/>
+						</Form.Group>
+						<div style={{ textAlign: "center" }}>
+							<Button
+								className="button"
+								variant="primary"
+								type="submit"
+								onSubmit={handleSubmit}
+							>
+								SUBMIT
+							</Button>
+						</div>
+					</Form>
+				</div>
+				{isSubmitted && <p className="title">Email Verification Link Sent</p>}
+				<div
+					style={{
+						color: "white",
+						width: "100%",
+						textAlign: "center",
+						fontSize: "1rem",
+					}}
+				>
+					<p>
+						Want to receive alerts for multiple districts? Fill the form again
+						and we've got you covered!
+					</p>
+				</div>
 			</div>
-			{isSubmitted && <p className="title">Email Verification Link Sent</p>}
-		</div>
+			<div className="footer">
+				<div>
+					{" "}
+					<a
+						href="https://apisetu.gov.in/public/api/cowin"
+						style={{ textDecoration: "none", color: "yellowgreen" }}
+					>
+						Co-WIN public API
+					</a>
+				</div>
+				<div>
+					By{" "}
+					<a
+						href="https://www.linkedin.com/in/shubhammohapatra/"
+						target="_blank"
+						style={{ textDecoration: "none", color: "yellowgreen" }}
+					>
+						Shubham
+					</a>{" "}
+					&{" "}
+					<a
+						href="https://www.linkedin.com/in/divjeet-singh/"
+						target="_blank"
+						style={{ textDecoration: "none", color: "yellowgreen" }}
+					>
+						Divjeet
+					</a>
+				</div>
+			</div>
+		</>
 	);
 }
 
