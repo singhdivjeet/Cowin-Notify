@@ -54,7 +54,7 @@ function App() {
 					<p>
 						18+ and unable to book slot? No need to refresh the CoWIN website
 						every five minutes: Sign up and you will receive an email update
-						when a slot is available for you in the next seven days.
+						when a slot is available for you.
 					</p>
 				</div>
 				<div className="container">
@@ -63,10 +63,11 @@ function App() {
 						<Form.Group controlId="formGridEmail">
 							<Form.Label className="label">Email :</Form.Label>
 							<Form.Control
+								style={{ width: "48%" }}
 								className="input"
 								name="email"
 								type="email"
-								placeholder="Enter email"
+								placeholder="Enter Email"
 								onChange={handleData}
 								required
 							/>
@@ -110,9 +111,10 @@ function App() {
 						<Form.Group controlId="formGridZip">
 							<Form.Label className="label">Pincode :</Form.Label>
 							<Form.Control
+								style={{ width: "48%" }}
 								className="input"
 								name="pin"
-								placeholder="Enter pincode"
+								placeholder="Enter Pincode"
 								onChange={handleData}
 								required
 							/>
@@ -134,17 +136,17 @@ function App() {
 							</Form.Control>
 						</Form.Group>
 
-						<Form.Group id="formGridCheckbox">
-							<Form.Label className="label">Cost :</Form.Label>
+						{/* <Form.Group id="formGridCheckbox">
+							<Form.Label className="label">Free :</Form.Label>
 							<Form.Check
 								style={{ display: "flex", alignItems: "center" }}
 								className="input"
 								name="isfree"
 								type="checkbox"
-								label=" free "
+								label=" yes "
 								onChange={handleFree}
 							/>
-						</Form.Group>
+						</Form.Group> */}
 						<div style={{ textAlign: "center" }}>
 							<Button
 								className="button"
