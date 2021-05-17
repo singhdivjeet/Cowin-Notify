@@ -3,14 +3,7 @@
 }
 
 .App-logo {
-	height: 5vmin;
-	pointer-events: none;
-	margin-top: 6px;
-	margin-bottom: 15px;
-	position: relative;
-	justify-content: center;
-	align-items: center;
-	right: -245px;
+	height: 60px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -18,11 +11,15 @@
 		animation: App-logo-spin infinite 20s linear;
 	}
 }
+.form-group {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.75rem 0rem;
+}
 
 .container {
 	position: relative;
-	max-width: 700px;
-	width: 100%;
+
 	background: #161b22;
 	padding: 25px 30px;
 	border: 2px solid #21262d;
@@ -35,52 +32,59 @@
 	justify-content: center;
 	align-items: center;
 	color: rgb(255, 4, 4);
-
+	letter-spacing: 1px;
+	font-weight: 800;
 	text-align: center;
 }
-
-.label {
+.footer {
+	bottom: 0;
 	display: flex;
+	width: 100%;
+	color: white;
+	margin-top: 3rem;
+	font-size: large;
+	justify-content: space-between;
+}
+.label {
+	/* display: flex;
 	flex-direction: row;
-	justify-content: center;
-	text-align: left;
-	width: 400px;
-	line-height: 26px;
-	margin-bottom: 9px;
-	margin-left: 50px;
+	justify-content: center; */
+	/* text-align: left; */
+
 	font-size: xx-large;
 }
 
 .title {
 	text-align: center;
-	color: rgba(201, 201, 31, 0.932);
+	color: yellowgreen;
 	margin-bottom: 40px;
+	letter-spacing: 1px;
 	font-size: 20px;
 }
 
 .input {
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
 	justify-content: center;
-	text-align-last: center;
-	width: 400px;
-	margin-bottom: 20px;
-	margin-left: 50px;
-	height: 37px;
+	text-align-last: center;*/
+
+	width: 50%;
 	font-weight: 100;
 }
 
 .button {
 	background-color: #c78813; /*Orange G*/
 	border: none;
+	border-radius: 8px;
 	color: white;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	font-size: 22px;
-	margin-left: 155px;
+	font-family: "Nunito", sans-serif;
 	width: 200px;
+	cursor: pointer;
 }
 
 .App-link {
