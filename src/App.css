@@ -51,13 +51,13 @@
 	justify-content: center; */
 	/* text-align: left; */
 
-	font-size: xx-large;
+	font-size: x-large;
 }
 
 .title {
 	text-align: center;
 	color: yellowgreen;
-	margin-bottom: 40px;
+	margin-bottom: 1.5rem;
 	letter-spacing: 1px;
 	font-size: 20px;
 }
@@ -78,6 +78,7 @@
 	border-radius: 8px;
 	color: white;
 	padding: 15px 32px;
+	margin-top: 1rem;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -85,6 +86,9 @@
 	font-family: "Nunito", sans-serif;
 	width: 200px;
 	cursor: pointer;
+}
+.button:hover {
+	background-color: #f3a412;
 }
 
 .App-link {
