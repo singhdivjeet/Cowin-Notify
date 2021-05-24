@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-
-mongoose.connect("mongodb://localhost:27017",{dbName: "covid19",useNewUrlParser:true,useFindAndModify:true,useUnifiedTopology:true,useFindAndModify:false,useCreateIndex:true})
+console.log(process.env);
+mongoose.connect(process.env.MONGODB_URI,{dbName: process.env.DB_NAME,useNewUrlParser:true,useFindAndModify:true,useUnifiedTopology:true,useFindAndModify:false,useCreateIndex:true})
 .then(()=> {console.log("MongoDB connected")})
 .catch((err)=> { console.log(err.message);});
 

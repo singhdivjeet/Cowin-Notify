@@ -2,6 +2,7 @@ const express = require("express");
 const morgan =  require("morgan");
 const cors =  require("cors");
 const httpError =  require("http-errors");
+require("dotenv").config();
 require("./helpers/init_mongo");;
 const User = require("./models/users");
 const bodyParser = require("body-parser");
