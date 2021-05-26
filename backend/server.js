@@ -55,7 +55,7 @@ app.post('/api/get', async function(req,res,next){
       from: 'cowin.notify.2019@gmail.com',
       to: body.email,
       subject: 'Test Email Subject',
-      html: `<p>Please verify using this link http://localhost:5000/api/verify?token=${body.emailtoken}</p>`
+      html: `<p>Please verify using this link https://cowin2021.herokuapp.com/api/verify?token=${body.emailtoken}</p>`
   });
 
     console.log(r);
