@@ -8,7 +8,8 @@ const User = require("./models/users");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const crypto = require("crypto");
-  
+const PORT = process.env.PORT || 8080;
+
 const app = express();
 
 
@@ -95,6 +96,6 @@ app.use((error, req, res, next)=> {
 
 
 
-  app.listen(5000, () => {
-    console.log(`Server running on port 5000`);
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
   });

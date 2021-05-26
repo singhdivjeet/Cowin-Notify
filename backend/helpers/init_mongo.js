@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-console.log(process.env);
-mongoose.connect(process.env.MONGODB_URI,{dbName: process.env.DB_NAME,useNewUrlParser:true,useFindAndModify:true,useUnifiedTopology:true,useFindAndModify:false,useCreateIndex:true})
+mongoose.connect('mongodb+srv://mushin:mushin2019@cluster0.3dkfx.mongodb.net/test',{dbName: 'covid19',useNewUrlParser:true,useFindAndModify:true,useUnifiedTopology:true,useFindAndModify:false,useCreateIndex:true})
 .then(()=> {console.log("MongoDB connected")})
 .catch((err)=> { console.log(err.message);});
 
