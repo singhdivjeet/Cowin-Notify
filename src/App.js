@@ -32,7 +32,7 @@ function App() {
 	async function handleSubmit(e) {
 		e.preventDefault();
 		setsubmit(true);
-		let res = await axios.post("http://localhost:5000/api/get", body);
+		let res = await axios.post("/api/get", body);
 		console.log(res);
 	}
 
