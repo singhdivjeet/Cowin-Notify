@@ -17,6 +17,10 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors());
 
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('../build'));
+}
+
 app.post('/api/get', async function(req,res,next){
     
     // const body = {
