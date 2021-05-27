@@ -8,7 +8,7 @@ const User = require("./models/users");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const crypto = require("crypto");
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 4000;
 
 const app = express();
 
@@ -17,6 +17,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors());
+
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('../build'));
@@ -54,7 +55,7 @@ app.post('/api/get', async function(req,res,next){
     let r =  await transporter.sendMail({
       from: 'cowin.notify.2019@gmail.com',
       to: body.email,
-      subject: 'Test Email Subject',
+      subject: 'Cowin Notification',
       html: `<p>Please verify using this link https://cowin2021.herokuapp.com/api/verify?token=${body.emailtoken}</p>`
   });
 
@@ -77,7 +78,7 @@ app.get("/api/verify", async function(req,res,next) {
   if(!user) res.send("Token Invalid");
   user.isVerified = true;
   user.save((err)=> {
-    if (!err) res.send("Successful");
+    if (!err) window.location.replace('https://cowin2021.herokuapp.com/verify');
         else res.send({"Error Occured": err.toString()});
   });
 

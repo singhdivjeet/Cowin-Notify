@@ -18,6 +18,11 @@ const userSchema = new mongoose.Schema(
         default: false
     },
 
+    lastSent: {
+        type: Date,
+        default: Date.now,
+    },
+
     state: {
         type: String
     },

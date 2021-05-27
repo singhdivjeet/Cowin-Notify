@@ -21,8 +21,12 @@ db = client.covid19
 
 for i in db.users.find():
     print("Checking slots for " + str(i['email']) + ' Pincode: ' + str(i['pin']) + ' District: ' +  str(i['district']))
+    
     j = 0
-    while(j<2):
+    if('lastSent' in i.keys()):
+        check = datetime.date.today() - i['lastSent'].date() >  datetime.timedelta(days=1)
+        print('Last Sent before ' ,i['lastSent'].date())
+    while(j<2 and check):
         ispin = api.getpin(i['pin'],days[j])
         isdist = api.getdistrict(i['district'],days[j])
         print(ispin['status'], isdist['status'])
