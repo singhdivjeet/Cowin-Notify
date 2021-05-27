@@ -78,7 +78,12 @@ app.get("/api/verify", async function(req,res,next) {
   if(!user) res.send("Token Invalid");
   user.isVerified = true;
   user.save((err)=> {
-    if (!err) window.location.replace('https://cowin2021.herokuapp.com/verify');
+    if (!err) {
+      res.status(201).json({
+        message: "Verification Complete",
+        redirectUrl: "https://cowin2021.herokuapp.com/verify"
+       });
+      }
         else res.send({"Error Occured": err.toString()});
   });
 
