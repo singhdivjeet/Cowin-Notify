@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 def sendmail(email_recepients):
     email_sender_account = "cowin.notify.2019@gmail.com"
     email_sender_username = "cowin.notify.2019@gmail.com"
-    email_sender_password = "cowinnotify"
+    email_sender_password = "password"
     email_smtp_server = "smtp.gmail.com"
     email_smtp_port = 587
     email_subject = "Cowin Notification"
