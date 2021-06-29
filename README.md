@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/singhdivjeet/Cowin-Notify">
     <img src="public/favicon.ico" alt="Logo" width="80" height="80">
   </a>
 
