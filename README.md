@@ -1,7 +1,26 @@
 
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="public/favicon.ico" alt="Logo" width="80" height="80">
+  </a>
 
-## Cowin Notify App
+  <h3 align="center">CoWIN NOTIFY</h3>
 
+  <p align="center">
+    MERN application for sending vaccine notification to registered users
+    <br />
+    <a href="https://github.com/singhdivjeet/Cowin-Notify"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/singhdivjeet/Cowin-Notify">View Demo</a>
+    ·
+    <a href="https://github.com/singhdivjeet/Cowin-Notify/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/singhdivjeet/Cowin-Notify/issues">Request Feature</a>
+  </p>
+</p>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
