@@ -1,7 +1,7 @@
 
 
 ## Cowin Notify App
-[![Contributors][contributors-shield]][contributors-url]
+
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -118,4 +118,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [Divjeet Singh](https://www.linkedin.com/in/divjeet-singh/) 
 
 Project Link: [https://github.com/singhdivjeet/Cowin-Notify](https://github.com/singhdivjeet/Cowin-Notify)
+
 
