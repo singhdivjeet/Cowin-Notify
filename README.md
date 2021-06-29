@@ -135,10 +135,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- AUTHORS -->
 ## Authors
-
-[Shubham Mohapatra](https://www.linkedin.com/in/shubhammohapatra/) &
-[Divjeet Singh](https://www.linkedin.com/in/divjeet-singh/) 
-
-Project Link: [https://github.com/singhdivjeet/Cowin-Notify](https://github.com/singhdivjeet/Cowin-Notify)
-
-
+<table>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/divjeet-singh/"><img src="https://avatars.githubusercontent.com/u/29839416?v=4" width="100px;" alt=""/><br /><sub><b>Divjeet Singh</b></sub></a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/shubhammohapatra/"><img src="https://avatars.githubusercontent.com/u/84135718?v=4" width="100px;" alt=""/><br /><sub><b>Shubham Mohapatra</b></sub></a></td>
+  </tr>
+</table>
